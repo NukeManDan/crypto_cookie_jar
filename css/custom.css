@@ -6,6 +6,16 @@
   --color_warmyellow: #EAC67A;
 }
 
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   overflow: hidden;
   margin: 0;
@@ -17,6 +27,16 @@ body {
   font-weight: 400;
 }
 
+a {
+  color: #1EAEDB;
+}
+
+a:hover {
+  color: #0FA0CE;
+}
+
+/* custom classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .CENTER {
   text-align: center;
   vertical-align: center;
@@ -42,7 +62,7 @@ img.fill {
   text-align: center;
 }
 
-/* Grid
+/* Grid - 12 colom
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .container {
@@ -58,10 +78,6 @@ img.fill {
   width: 100%;
   float: left;
   box-sizing: border-box;
-}
-
-.container {
-  width: 90%;
 }
 
 .column, .columns {
@@ -191,17 +207,6 @@ img.fill {
   margin-left: 52%;
 }
 
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-
-html {
-  font-size: 62.5%;
-}
-
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -251,13 +256,62 @@ p {
   margin-top: 0;
 }
 
-/* Links
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+  /* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
+/* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-a {
-  color: #1EAEDB;
-}
-
-a:hover {
-  color: #0FA0CE;
-}
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
